@@ -59,9 +59,9 @@ document.getElementById("addBtn").addEventListener("click", function (e) {
 
 page.build.js file is generated from page.js with libraries like browserify or babel or parcel or webpack.
 
-### [Building Sample][]
+### [Buil Sample][]
 
-[Building Sample]: https://github.com/JosephUz/jang/tree/master/gulpfile.js
+[Buil Sample]: https://github.com/JosephUz/jang/tree/master/gulpfile.js
 
 
 ### tr.js file
