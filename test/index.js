@@ -129,6 +129,5 @@ describe("index.js test", function () {
     });
 });
 
-mocha.setup({ globals: ['jangObject'] });
 mocha.checkLeaks();
 mocha.run();
