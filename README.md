@@ -48,7 +48,8 @@ document.getElementById("changeBtn").addEventListener("click", function (e) {
 
 document.getElementById("addBtn").addEventListener("click", function (e) {
     var div = document.createElement('div');
-    div.innerHTML = '<jang text="language"></jang> <button jang="title:new.title;"> <jang text="new.title"></jang> </button>';
+    div.innerHTML = `<jang text="language"></jang> 
+        <button jang="title:new.title;"> <jang text="new.title"></jang> </button>`;
     document.querySelector('body').append(div);
     jang.refresh();
 });
