@@ -17,10 +17,10 @@ test_libs_script();
 describe("index.js test", function () {
     it("add languages to jang", function (done) {
         try {
-            jang.add('en', en);
             jang.add([
                 { name: 'tr', value: tr }
             ]);
+            jang.add('en', en);
 
             done();
         } catch (err) {

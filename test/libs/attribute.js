@@ -2,23 +2,12 @@ const Attribute = require('../../libs/attribute.js');
 
 module.exports = function () {
     describe("/libs/attribute.js test", function () {
-        it("must be function", function (done) {
-            try {
-                if (typeof (Attribute) == 'function')
-                    done();
-                else
-                    done(new Error('must be function failed!'));
-            } catch (err) {
-                done(err);
-            }
-        });
-
-        it("create instance and check properties", function (done) {
+        it("create instance", function (done) {
             try {
                 var element = document.createElement('div');
                 element.setAttribute('jang', 'title:language;');
                 var instance = new Attribute(element);
-                if (typeof (instance) == 'object' && typeof (instance.refresh) == 'function' && typeof (instance.exist) == 'function')
+                if (instance instanceof Attribute)
                     done();
                 else
                     done(new Error('create instance failed!'));
@@ -27,7 +16,7 @@ module.exports = function () {
             }
         });
 
-        it("check fields", function (done) {
+        it("check instance", function (done) {
             try {
                 var element = document.createElement('div');
                 element.setAttribute('jang', 'title:language;');
@@ -35,7 +24,7 @@ module.exports = function () {
                 if (instance.element == element && instance.scripts.length == 1 && instance.element.getAttribute('jang') == null)
                     done();
                 else
-                    done(new Error('check fields failed!'));
+                    done(new Error('check instance failed!'));
             } catch (err) {
                 done(err);
             }

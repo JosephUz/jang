@@ -47,6 +47,9 @@ exports.set = function (name) {
 }
 
 exports.add = function (name, value) {
+    if (!current && typeof (name) == 'string')
+        current = name;
+
     if (typeof (name) == "object" && name instanceof Array) {
         name.forEach(function (item) {
             exports.add(item.name, item.value);

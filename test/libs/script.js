@@ -3,21 +3,10 @@ const tr = require('../../locales/tr.js');
 
 module.exports = function () {
     describe("/libs/script.js test", function () {
-        it("must be function", function (done) {
-            try {
-                if (typeof (Script) == 'function')
-                    done();
-                else
-                    done(new Error('must be function failed!'));
-            } catch (err) {
-                done(err);
-            }
-        });
-
-        it("create instance and check properties", function (done) {
+        it("create instance", function (done) {
             try {
                 var instance = new Script("language");
-                if (typeof (instance) == 'object' && typeof (instance.refresh) == 'function' && typeof (instance.onChange) == 'function')
+                if (instance instanceof Script)
                     done();
                 else
                     done(new Error('create instance failed!'));
@@ -26,7 +15,7 @@ module.exports = function () {
             }
         });
 
-        it("check fields", function (done) {
+        it("check instance", function (done) {
             try {
                 var instance = new Script("language");
                 if (instance.text == "language" && instance.value == null && instance.events.onChange == null)

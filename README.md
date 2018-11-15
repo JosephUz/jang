@@ -14,12 +14,25 @@ $ npm install jang
 
 ```html
 
-<jang text="language"></jang>
-<button id="changeBtn" jang="title:title;">
-    <jang text="title"></jang>
-</button>
+<!-- html lang attribute default language -->
 
-<script src="./page.build.js"></script>
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <jang text="language"></jang>
+    <button id="changeBtn" jang="title:title;">
+        <jang text="change.title"></jang>
+    </button>
+
+    <script src="./index.build.min.js"></script>
+</body>
+
+</html>
 
 ```
 
@@ -36,6 +49,7 @@ jang.add([
     { name: 'tr', value: tr }
 ]);
 
+// html lang attribute is default language or if it doesn't exist, first added language is default
 jang.refresh();
 
 jang.onChange(function (name, value) {

@@ -3,23 +3,12 @@ const Script = require('../../libs/script.js');
 
 module.exports = function () {
     describe("/libs/jang.js test", function () {
-        it("must be function", function (done) {
-            try {
-                if (typeof (Jang) == 'function')
-                    done();
-                else
-                    done(new Error('must be function failed!'));
-            } catch (err) {
-                done(err);
-            }
-        });
-
-        it("create instance and check properties", function (done) {
+        it("create instance", function (done) {
             try {
                 var element = document.createElement('jang');
                 element.setAttribute('text', 'language;');
                 var instance = new Jang(element);
-                if (typeof (instance) == 'object' && typeof (instance.refresh) == 'function' && typeof (instance.exist) == 'function')
+                if (instance instanceof Jang)
                     done();
                 else
                     done(new Error('create instance failed!'));
@@ -28,7 +17,7 @@ module.exports = function () {
             }
         });
 
-        it("check fields", function (done) {
+        it("check instance", function (done) {
             try {
                 var element = document.createElement('jang');
                 element.setAttribute('text', 'language;');
