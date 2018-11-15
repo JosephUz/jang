@@ -1,6 +1,6 @@
 {
   "name": "jang",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "For client-side language text",
   "main": "index.js",
   "scripts": {
