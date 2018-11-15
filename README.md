@@ -36,7 +36,7 @@ $ npm install jang
 
 ```
 
-### page.js file
+### index.js file
 
 ```javascript
 
@@ -70,9 +70,9 @@ document.getElementById("addBtn").addEventListener("click", function (e) {
 
 ```
 
-### page.build.js file
+### index.build.js file
 
-page.build.js file is generated from page.js with libraries like browserify or babel or parcel or webpack.
+index.build.js file is generated from index.js with libraries like browserify or babel or parcel or webpack.
 
 ### [Build Sample][]
 
